@@ -331,7 +331,7 @@ pub struct AppServer {
     /// Contains the actual cryptographic implementation.
     ///
     /// Because the API supports initializing the server with a keypair
-    /// and CryptoServer needs to be initialized with a keypair, the struct
+    /// and CryptoServer needs to be initialized with a keypair, the
     /// struct is wrapped in a ConstructionSite
     pub crypto_site: ConstructionSite<BuildCryptoServer, CryptoServer>,
     /// The UDP sockets used to send and receive protocol messages
