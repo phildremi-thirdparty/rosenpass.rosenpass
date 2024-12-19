@@ -702,12 +702,12 @@ impl KnownResponseHasher {
 /// An established session
 ///
 /// Rosenpass is a key exchange and not transport protocol
-/// though initially we still though Rosenpass might be expanded
+/// though initially we still thought Rosenpass might be expanded
 /// into a transport protocol at some point. These plans are not
 /// entirely abandoned, but if we do decide that Rosenpass should
 /// support transport encryption then we will add this as a protocol
 /// extension. For this reason, Rosenpass currently essentially features
-/// stubs for transport data handling (and therefor session handling)
+/// stubs for transport data handling (and therefore session handling)
 /// but they are not really put to good use; the session implementation
 /// is overcomplicated for what we really use.
 ///
@@ -3329,7 +3329,7 @@ impl HandshakeState {
 
     /// Initialize a [Session] after the key exchange was completed
     ///
-    /// This called by either party.
+    /// This may be called by either party.
     ///
     /// `role` indicates whether the local peer was an initiator or responder in the handshake.
     pub fn enter_live(self, srv: &CryptoServer, role: HandshakeRole) -> Result<Session> {
@@ -3416,7 +3416,7 @@ impl CryptoServer {
         // IHI8
         hs.core.encrypt_and_mix(ih.auth.as_mut_slice(), &[])?;
 
-        // Update the handshake hash last (not changing any state on prior error
+        // Update the handshake hash last (not changing any state on prior error)
         peer.hs().insert(self, hs)?;
 
         Ok(peer)
