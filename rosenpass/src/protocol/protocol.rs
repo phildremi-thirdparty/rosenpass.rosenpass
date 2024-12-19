@@ -3378,7 +3378,7 @@ impl CryptoServer {
 }
 
 impl CryptoServer {
-    /// Core cryptographic protocol implementation: Kicks of the handshake
+    /// Core cryptographic protocol implementation: Kicks off the handshake
     /// on the initiator side, producing the InitHello message.
     pub fn handle_initiation(&mut self, peer: PeerPtr, ih: &mut InitHello) -> Result<PeerPtr> {
         let mut hs = InitiatorHandshake::zero_with_timestamp(self);
