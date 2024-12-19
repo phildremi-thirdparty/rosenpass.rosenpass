@@ -1461,7 +1461,7 @@ impl CryptoServer {
     ///
     /// The session id `id` must be chosen by the local peer; it is a "sidm" (Session ID Mine).
     ///
-    /// To rgister a session, you should generally use [SessionPtr::insert] or [IniHsPtr::insert]
+    /// To register a session, you should generally use [SessionPtr::insert] or [IniHsPtr::insert]
     /// instead of this, more lower level function.
     pub fn register_session(&mut self, id: SessionId, peer: PeerPtr) -> Result<()> {
         match self.index.entry(IndexKey::Sid(id)) {
