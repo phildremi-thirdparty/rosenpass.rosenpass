@@ -11,7 +11,7 @@
 //!   to parse those messages through the [::zerocopy] crate
 //! - [crate::protocol] this is where the bulk of our code lives; this module contains the actual
 //!   cryptographic protocol logic
-//! - crate::api implements the Rosenpass unix socket API, if feature "experiment_api" is active
+//! - [crate::api] implements the Rosenpass unix socket API, if feature "experiment_api" is active
 
 #[cfg(feature = "experiment_api")]
 pub mod api;
