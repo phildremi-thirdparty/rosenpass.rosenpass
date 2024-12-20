@@ -330,7 +330,7 @@ const EVENT_CAPACITY: usize = 20;
 pub struct AppServer {
     /// Contains the actual cryptographic implementation.
     ///
-    /// Because the API supports initializing the server with a keypair
+    /// Because the API supports initializing the server without a keypair
     /// and CryptoServer needs to be initialized with a keypair, the
     /// struct is wrapped in a ConstructionSite
     pub crypto_site: ConstructionSite<BuildCryptoServer, CryptoServer>,
